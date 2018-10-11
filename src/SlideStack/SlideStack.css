@@ -1,0 +1,18 @@
+#slideStack{
+    overflow-x: auto;
+}
+
+#slideStack #scroller{
+    display: flex;
+}
+
+#slideStack .slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 200px;
+    flex-shrink: 0;
+    background: #fff;
+    margin-right: 0.2em;
+}

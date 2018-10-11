@@ -6,9 +6,58 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: #1A0D39;
+}
+
+:not(:root):-webkit-full-screen{
+  background: #1A0D39;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+*{
+  outline: none;
+}
+
+#startBtn{
+  background: #fff;
+  padding: 0.5em 1em;
+  max-height: 40px;
+  max-width: 200px;
+  font-size: 0.9em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#mainApp{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+}
+
+#slideIndex{
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
