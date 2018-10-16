@@ -3,7 +3,7 @@ import { Socket } from 'react-socket-io';
 import Setup from './Setup';
 import App from './App';
 
-// const uri = 'http://192.168.8.101:5000';
+const uri = 'http://192.168.8.102:5000';
 const options = { transports: ['websocket'] };
 
 class AppContainer extends React.Component {
@@ -44,7 +44,7 @@ class AppContainer extends React.Component {
           this.state.started && (
             <React.Fragment>
               {
-                this.state.uri!= null && (
+                this.state.uri !== null && (
                   <Socket uri={this.state.uri} options={options}> 
                     <App />
                   </Socket>
@@ -59,7 +59,11 @@ class AppContainer extends React.Component {
 
         {
           !this.state.started && (
-            <button id="startBtn" onClick={ this.getStarted }>GET STARTED</button>
+            <div id="startWrapper">
+              <h1>Web Slides Clicker</h1>
+              <p>Welcome, to using the clicker,<br/> click the button below.</p>
+              <button id="startBtn" onClick={ this.getStarted }>GET STARTED</button>
+            </div>
           )
         }
       </React.Fragment>

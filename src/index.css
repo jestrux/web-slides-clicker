@@ -7,6 +7,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  user-select: none;
+
   background: #1A0D39;
 }
 
@@ -23,18 +25,47 @@ code {
   outline: none;
 }
 
-#startBtn{
-  background: #fff;
-  padding: 0.5em 1em;
-  max-height: 40px;
-  max-width: 200px;
-  font-size: 0.9em;
+#startWrapper{
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+#startWrapper h1{
+  font-size: 2em;
+  margin-bottom: 0.3em;
+  line-height: 0;
+  font-family: cursive;
+  color: goldenrod;
+  margin-bottom: .8em;
+}
+
+#startWrapper p{
+  font-size: 1.3em;
+  margin-bottom: 0.3em;
+  color: #695c86;
+  margin-bottom: 1.5em;
+  padding: 0 2em;
+  display: block;
+  flex-wrap: wrap;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+#startBtn{
+  background: #3b3052;
+  padding: 0.8em 1.2em;
+  max-width: 200px;
+  font-size: 0.9em;
+  border: none;
+  color: #bfb8ce;
 }
 
 #mainApp{
@@ -60,4 +91,36 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#slideshowTime{
+  position: fixed;
+  top: 1.6em;
+  right: 0.85em;
+  display: flex;
+  align-items: center;
+}
+
+#slideshowTime span{
+  font-size: 1.3em;
+  color: #fff;
+  padding: 0 0.1em;
+  letter-spacing: 0.04em;
+}
+
+#slideshowTime span:nth-child(2){
+  margin-bottom: 0.13em;
+}
+
+.blink{
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
 }

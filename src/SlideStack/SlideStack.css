@@ -1,18 +1,26 @@
 #slideStack{
     overflow-x: auto;
+    flex: 1;
+    position: relative;
 }
 
 #slideStack #scroller{
-    display: flex;
+    position: relative;
+    height: 100%;
 }
 
-#slideStack .slide{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90px;
-    width: 200px;
-    flex-shrink: 0;
-    background: #fff;
-    margin-right: 0.2em;
+#Slide{
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    margin: auto;
+    width: 100vw;
+    height: 40%;
+    z-index: 1;
+}
+
+#Slide:not(.current){
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
 }
