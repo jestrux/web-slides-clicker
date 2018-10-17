@@ -77,6 +77,7 @@ class SlideStack extends React.Component {
     }
 
     return (
+      <React.Fragment>
       <div id="slideStack">
         <Slide nextStyle={prevStyle} slide={ prev } />
 
@@ -98,6 +99,14 @@ class SlideStack extends React.Component {
 
         <Slide nextStyle={nextStyle} slide={ next } />
       </div>
+
+      {
+        cur.actions && cur.actions.length > 0 && cur.actions.filter(a => a.type === 'video').length > 0
+        && <button className="video-player" onClick={ () => this.props.onSlideAction({ type: 'video' }) }>PLAY VIDEO</button>
+      }
+
+      </React.Fragment>
+
     );
   }
 }

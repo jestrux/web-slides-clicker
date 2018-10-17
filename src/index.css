@@ -59,13 +59,22 @@ code {
   line-height: 1.5em;
 }
 
-#startBtn{
+#startBtn, .video-player{
   background: #3b3052;
   padding: 0.8em 1.2em;
   max-width: 200px;
   font-size: 0.9em;
   border: none;
   color: #bfb8ce;
+}
+
+.video-player{
+  margin-top: 1.5em;
+  position: absolute;
+  bottom: 5em;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
 }
 
 #mainApp{
